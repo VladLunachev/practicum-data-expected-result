@@ -1,0 +1,15 @@
+{
+  "name": "Practicum Expected Result",
+  "version": "0.01",
+  "description": "ER",
+  "content_scripts": [
+    {
+      "matches": ["https://practicum.yandex.com/trainer/data-analyst/*"],
+      "css": ["er.css"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2,
+  "permissions": ["tabs", "<all_urls>"]
+}

@@ -1,0 +1,28 @@
+.er-buttons {
+  padding-right: 25px;
+  cursor: pointer;
+}
+.er-tip {
+  font-family: YS Text, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #A5A5A5;
+  font-weight: 400;
+}
+ins {
+  background: lightgreen;
+  text-decoration: none;
+}
+del {
+  background: pink;
+  text-decoration: none;
+}
+#congrats {
+  display: block;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+
+}
