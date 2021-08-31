@@ -430,8 +430,8 @@ let expectedResultHTML = `
 let studentResultHTML = `
 <section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average rating: 7.93
 </pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average length: 135.93 min.
-</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average budget: $37.96 mil.
-</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average revenue: $347.99 mil.
+</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average budget: $137.96 mil.
+</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average revenue: $347.99 mil
 </pre></section></section>`;
 
 var erHeader = `
