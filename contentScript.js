@@ -428,7 +428,7 @@ let expectedResultHTML = `
 </pre></section></section>`;
 
 let studentResultHTML = `
-<section class="playground-terminal__stdout playground-terminal__stdout_type_logs playground-terminal__stdout_theme_light"><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average rating: 7.93
+<section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average rating: 7.93
 </pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average length: 135.93 min.
 </pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average budget: $37.96 mil.
 </pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average revenue: $347.99 mil.
@@ -529,9 +529,10 @@ function init() {
     }
   }
 }
-// init on error
+// init on error if not traceback
 var state = 'error';
-if (state == 'error') {
+var traceback = false
+if (state == 'error' && traceback == false) {
   setTimeout(() => {
     expectedResultHTML == studentResultHTML ? congratsPopup() : console.log('not yet') // если ошибка, но результаты совпадают > модификация ассерта ошибки
     document.querySelector('.notification_type_success').style.borderColor = 'gray'
