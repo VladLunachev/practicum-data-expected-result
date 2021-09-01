@@ -324,12 +324,12 @@ op_map = {
   insert: function (op, before_tokens, after_tokens) {
     var val;
     val = after_tokens.slice(op.start_in_after, +op.end_in_after + 1 || 9e9);
-    return wrap('ins', val);
+    return wrap('ins class="er-inserted"', val);
   },
   delete: function (op, before_tokens, after_tokens) {
     var val;
     val = before_tokens.slice(op.start_in_before, +op.end_in_before + 1 || 9e9);
-    return wrap('del', val);
+    return wrap('del class="er-deleted"', val);
   },
 };
 op_map.replace = function (op, before_tokens, after_tokens) {
@@ -430,8 +430,8 @@ let expectedResultHTML = `
 let studentResultHTML = `
 <section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average rating: 7.93
 </pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average length: 135.93 min.
-</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average budget: $137.96 mil.
-</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average revenue: $347.99 mil
+</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average budget: $37.9 mil.
+</pre></section><section class="playground-terminal__stdout playground-terminal__stdout_type_stream playground-terminal__stdout_level_stdout"><pre class="playground-terminal__stdout-content">Average revenue: $34.99 mil.
 </pre></section></section>`;
 
 var erHeader = `
@@ -480,7 +480,7 @@ function buttonsAndListeners() {
   });
 }
 function compared() {
-  var comparedResult = htmldiff(expectedResultHTML, studentResultHTML);
+  var comparedResult = htmldiff(studentResultHTML, expectedResultHTML);
 
   document.querySelector('.c-result').style.textDecoration = 'underline';
   document.querySelector('.s-result').style.textDecoration = 'none';
