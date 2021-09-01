@@ -8,11 +8,11 @@
   color: #A5A5A5;
   font-weight: 400;
 }
-ins {
+.er-right {
   background: lightgreen;
   text-decoration: none;
 }
-del {
+.er-wrong {
   background: pink;
   text-decoration: none;
 }

@@ -324,12 +324,12 @@ op_map = {
   insert: function (op, before_tokens, after_tokens) {
     var val;
     val = after_tokens.slice(op.start_in_after, +op.end_in_after + 1 || 9e9);
-    return wrap('ins class="er-inserted"', val);
+    return wrap('ins class="er-right"', val);
   },
   delete: function (op, before_tokens, after_tokens) {
     var val;
     val = before_tokens.slice(op.start_in_before, +op.end_in_before + 1 || 9e9);
-    return wrap('del class="er-deleted"', val);
+    return wrap('del class="er-wrong"', val);
   },
 };
 op_map.replace = function (op, before_tokens, after_tokens) {
