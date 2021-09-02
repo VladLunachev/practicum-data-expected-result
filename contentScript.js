@@ -537,6 +537,7 @@ if (state == 'error' && traceback == false) {
     expectedResultHTML == studentResultHTML ? congratsPopup() : console.log('not yet') // если ошибка, но результаты совпадают > модификация ассерта ошибки
     document.querySelector('.notification_type_success').style.borderColor = 'gray'
     // мб еще иконку заменить?
+    // добавить кастомное событие в метрику - найдено альтернативное решение - добавить в тестовую либу
   }, 500)
   init();
 }
