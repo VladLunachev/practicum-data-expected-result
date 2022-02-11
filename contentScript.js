@@ -435,7 +435,7 @@ let studentResultHTML = `
 </pre></section></section>`;
 
 var erHeader = `
-<span class="er-buttons c-result">Compared Result</span>
+<span class="er-buttons c-result">Compared</span>
 <span class="er-buttons s-result">Your Result</span>
 <span class="er-buttons e-result">Expected Result</span>
 <span class="er-tip">(press 1, 2, 3 or click on results to switch)</span>
